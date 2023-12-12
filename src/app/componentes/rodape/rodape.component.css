@@ -1,0 +1,36 @@
+footer {
+  background-color: #27374D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+}
+
+.TextoCopyright {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  grid-area: TextoCopyright;
+}
+
+footer small {
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .cabecalho .logo {
+    padding: 2rem;
+  }
+
+  .cabecalho p {
+    font-size: 1.5rem
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    display: flex;
+    text-align: center;
+    gap: 1rem;
+  }
+}

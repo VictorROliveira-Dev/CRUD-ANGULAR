@@ -1,0 +1,16 @@
+<div class="tarefa {{ tarefa.modelo }}" [ngClass]="larguraTarefa">
+  <img
+    src="../../../../assets/imagens/{{ tarefa.modelo }}.png"
+    alt="Imagem cartão"
+  />
+  <p class="conteudo"><strong>{{ tarefa.conteudo }}</strong></p>
+  <p class="descricao">{{ tarefa.descricao }}</p>
+  <div class="acoes">
+    <button class="botao-editar" routerLink="/tarefas/editar-tarefa/{{tarefa.id}}">
+      <i class="fa-solid fa-pencil fa-xl"></i>
+    </button>
+    <button class="botao-excluir" routerLink="/tarefas/excluir-tarefa/{{tarefa.id}}">
+      <i class="fa-solid fa-trash fa-xl"></i>
+    </button>
+  </div>
+</div>

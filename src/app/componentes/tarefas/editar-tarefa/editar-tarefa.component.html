@@ -1,0 +1,87 @@
+<section class="container editar-tarefas">
+  <header class="header">
+    <h2 class="titulo-main">Adicione uma tarefa:</h2>
+  </header>
+  <form action="">
+    <label for="tarefa">Nome da tarefa:</label>
+    <input
+      type="textarea"
+      class="input"
+      id="tarefa"
+      name="tarefa"
+      placeholder="Digite o nome da tarefa"
+      [(ngModel)]="tarefa.conteudo"
+    />
+
+    <label for="descricao">Fale mais sobre a sua tarefa:</label>
+    <input
+      type="textarea"
+      class="input"
+      id="descricao"
+      name="descricao"
+      placeholder="Digite a descrição da tarefa"
+      [(ngModel)]="tarefa.descricao"
+    />
+
+    <label for="modelo">Selecione o modelo do card:</label>
+    <div class="container-radio">
+      <div class="radio-modelo">
+        <label for="modelo1">
+          <input type="radio" id="modelo1" value="modelo1" name="modelo-card"  [(ngModel)]="tarefa.modelo"/>
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>Modelo 1:</span>
+        </label>
+        <p class="titulo-modelo">Prévia:</p>
+        <div class="modelo modelo1">
+          <img src="../../../../assets/imagens/modelo1.png" alt="aspas azuis" />
+          <p class="conteudo">{{ tarefa.conteudo }}</p>
+          <p class="descricao">
+            <b>{{ tarefa.descricao }}</b>
+          </p>
+        </div>
+      </div>
+
+      <div class="radio-modelo">
+        <label for="modelo2">
+          <input type="radio" id="modelo2" value="modelo2" name="modelo-card" [(ngModel)]="tarefa.modelo"/>
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>Modelo 2:</span>
+        </label>
+        <p class="titulo-modelo">Prévia:</p>
+        <div class="modelo modelo2">
+          <img src="../../../../assets/imagens/modelo2.png" alt="aspas azuis" />
+          <p class="conteudo">{{ tarefa.conteudo }}</p>
+          <p class="descricao">
+            <b>{{ tarefa.descricao }}</b>
+          </p>
+        </div>
+      </div>
+
+      <div class="radio-modelo">
+        <label for="modelo3">
+          <input type="radio" id="modelo3" value="modelo3" name="modelo-card" [(ngModel)]="tarefa.modelo"/>
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>Modelo 3:</span>
+        </label>
+        <p class="titulo-modelo">Prévia:</p>
+        <div class="modelo modelo3">
+          <img src="../../../../assets/imagens/modelo3.png" alt="aspas azuis" />
+          <p class="conteudo">{{ tarefa.conteudo }}</p>
+          <p class="descricao">
+            <b>{{ tarefa.descricao }}</b>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="acoes">
+      <button (click)="editarTarefa()" class="botao">Salvar</button>
+      <button (click)="cancelarTarefa()" class="botao cancelar">Cancelar</button>
+    </div>
+  </form>
+</section>
